@@ -16,5 +16,10 @@ form{
     background-color:rgb(84, 91, 102);
     outline-style : solid;  
     outline-color : rgb(80, 78, 78);
+    width : 80%;
   
   } 
+
+  input, label {
+    display:block;
+}
