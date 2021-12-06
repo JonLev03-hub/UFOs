@@ -13,14 +13,14 @@
     />
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class="bg-dark">
     <div class ="wrapper">
         <nav class = "navbar navbar-expand-lg" >
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
-        <div class=”jumbotron”><div>
-            <h1>The truth is out there!</h1>
-        </div>
+        <div class="jumbotron">
+            <h1 class="display-4">The Truth is Out There</h1>
+          </div>
         <div class="container-fluid">
             <div class="row">
               <div class="col-md-4">
@@ -37,15 +37,21 @@
             <div class="row">
               <div class="col-md-3">
                 <form>
-                    <p>Filter Search</p>
-                </form>
-                <li class="list-group-item">
-                    <label for="date">Enter Date</label>
-                    <input type="text" placeholder="1/10/2010" id="datetime" />
-                </li>
-                <li class="list-group-item">
-                    <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
-                </li>
+                    <ul style="list-style: none;">
+                      <li>
+                        <p>Filter Search</p>
+                      </li>
+                      <li>
+                        <label for="date">Enter Date</label>
+                        <input type="text" placeholder="Month/Day/Year" id="datetime" />
+                      </li>
+                      <li>
+                         <button id="filter-btn" type="button" class="btn btn-secondary btn-lg">
+                           Filter Table
+                         </button>
+                      </li>
+                    </ul>
+                   </form>
               </div>
               <div class="col-md-9">
                 <table class="table table-striped">
