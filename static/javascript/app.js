@@ -27,7 +27,7 @@ function buildTable(data) {
 var filters = {}
 
 // 3. Use this function to update the filters. 
-function updateFilters(x) {
+function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
     element = d3.select(this);
@@ -52,14 +52,19 @@ function updateFilters(x) {
   function filterTable() {
   
     // 8. Set the filtered data to the tableData.
+    let filteredData = tableData;
+    for (const [key, value] of Object.entries(filters)) {
+      filteredData = filteredData.filter(row => row[key] === value)
+    }
     
+
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
     
   
     // 10. Finally, rebuild the table using the filtered data
-    
+    buildTable(filteredData)
   }
   
   // 2. Attach an event to listen for changes to each filter
